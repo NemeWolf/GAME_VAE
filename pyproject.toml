@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "game-music-gen"
+version = "0.1.0"
+description = "Music generator with VAE in real time"
+authors = ["NemeWolf  <nehemiasman_8@live.com>"]
+readme = "README.md"
+packages = [
+    {include = "config"},
+    {include = "models"},
+    {include = "utils"},
+    {include = "data/IMG"},
+    {include = "data/MIDI"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+music21 = "^9.1.0"
+tensorflow = "^2.18.0"
+pandas = "^2.2.3"
+opencv-python = "^4.10.0.84"
+scikit-learn = "^1.5.2"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
